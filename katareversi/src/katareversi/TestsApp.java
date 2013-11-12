@@ -63,7 +63,7 @@ public class TestsApp {
 						"W";
 		
 		
-		assertEquals(resultat, jeu.montrePossibilites().donnePlateau());
+		assertEquals(resultat, jeu.changeTour().montrePossibilites().donnePlateau());
 
 	}
 	

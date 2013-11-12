@@ -51,13 +51,13 @@ public class Reversi {
 	public Reversi changeTour(){
 		if(plateau.charAt(plateau.length()-1)=="W".charAt(0) )
 		{
-			plateau=plateau.substring(0, plateau.length()-2);
-			plateau.concat("B");
+			plateau=plateau.substring(0, plateau.length()-1);
+			plateau=plateau.concat("B");
 		}
 		if(plateau.charAt(plateau.length()-1)=="B".charAt(0) )
 		{
-			plateau=plateau.substring(0, plateau.length()-2);
-			plateau.concat("W");
+			plateau=plateau.substring(0, plateau.length()-1);
+			plateau=plateau.concat("W");
 		}
 		return this;
 	}
