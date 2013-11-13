@@ -22,58 +22,6 @@ public class TestsApp {
 	@Before
 	public void withCalcInstance() {
 		this.jeu = new Reversi();
-		
-		testArrayInput = new ArrayList<String>();
-		
-		String in =""+
-				"........\n"+
-				"........\n"+
-				"........\n"+
-				"...BW...\n"+
-				"...WB...\n"+
-				"........\n"+
-				"........\n"+
-				"........\n"+
-				"B";
-		testArrayInput.add(in);
-		
-		String in2 =""+
-				"........\n"+
-				"........\n"+
-				"........\n"+
-				"...BW...\n"+
-				"...WB...\n"+
-				"........\n"+
-				"........\n"+
-				"........\n"+
-				"W";
-		testArrayInput.add(in2);
-		
-		testArrayOutput = new ArrayList<String>();
-		
-		String resultat =""+
-				"........\n"+
-				"........\n"+
-				"....0...\n"+
-				"...BW0..\n"+
-				"..0WB...\n"+
-				"...0....\n"+
-				"........\n"+
-				"........\n"+
-				"B";
-		testArrayOutput.add(resultat);
-		
-		String resultat2 =""+
-				"........\n"+
-				"........\n"+
-				"...0....\n"+
-				"..0BW...\n"+
-				"...WB0..\n"+
-				"....0...\n"+
-				"........\n"+
-				"........\n"+
-				"W";
-		testArrayOutput.add(resultat2);
 	}
 	
 	@Parameters
@@ -127,9 +75,9 @@ public class TestsApp {
                 
                 	{
             		//ça
-                	"...BW...\n",
+                	"...WB...\n",
                 		//retourne ça
-                		"...BW0..\n"}
+                		"..0WB...\n"}
                 		
 	        						});
         }

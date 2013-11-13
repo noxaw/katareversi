@@ -11,10 +11,14 @@ public class Reversi {
 		
 		this.joueurEstBlanc();
 		
-		if(plateau.contains(joueurActif+joueurPassif+".")){
+		/*if(plateau.contains(joueurActif+joueurPassif+".")){
 			return plateau.replaceAll(joueurActif+joueurPassif+".", joueurActif+joueurPassif+"0");
-		}
-		return plateau;
+		}*/
+		
+		String retour = plateau.replaceAll(joueurActif+"("+joueurPassif+"+)\\.", ""+joueurActif+"$10");
+		retour = retour.replaceAll("\\.(W+)B", "0$1B");
+		System.out.println(retour);
+		return retour;
 	}
 	
 	public void joueurEstBlanc(){
