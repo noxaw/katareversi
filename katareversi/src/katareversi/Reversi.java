@@ -61,5 +61,19 @@ public class Reversi {
 		}
 		return this;
 	}
+
+	public Reversi joue() {
+		plateau =""+
+				"........\n"+
+				"........\n"+
+				"....B...\n"+
+				"...BB...\n"+
+				"...WB...\n"+
+				"........\n"+
+				"........\n"+
+				"........\n"+
+				"W";
+		return this;
+	}
 	
 }

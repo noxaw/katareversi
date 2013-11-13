@@ -64,7 +64,22 @@ public class TestsApp {
 		
 		
 		assertEquals(resultat, jeu.changeTour().montrePossibilites().donnePlateau());
-
+	}
+	
+	@Test
+	public void TestPlateauJoueJoueurNoir(){
+		String resultat =""+
+				"........\n"+
+				"........\n"+
+				"....B...\n"+
+				"...BB...\n"+
+				"...WB...\n"+
+				"........\n"+
+				"........\n"+
+				"........\n"+
+				"W";
+		
+		assertEquals(resultat, jeu.montrePossibilites().joue().donnePlateau());
 	}
 	
 }
