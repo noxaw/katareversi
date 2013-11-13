@@ -77,7 +77,25 @@ public class TestsApp {
             		//ça
                 	"...WB...\nW",
                 		//retourne ça
-                		"...WB0..\nW"}
+                		"...WB0..\nW"},
+                	
+                	{
+            		//ça
+                	"...BW...\nB",
+                		//retourne ça
+                		"...BW0..\nB"},
+                		
+                	{
+            		//ça
+                	"...BW...\nW",
+                		//retourne ça
+                		"..0BW...\nW"},
+                		
+                	{
+            		//ça
+                	"...WB...\nB",
+                		//retourne ça
+                		"..0WB...\nB"}
                 		
 	        						});
         }
