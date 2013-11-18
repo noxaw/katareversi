@@ -16,8 +16,7 @@ import org.junit.runners.Parameterized;
 public class TestsApp {
 	
 	private Reversi jeu;
-	private ArrayList<String> testArrayOutput;
-	private ArrayList<String> testArrayInput;
+
 	
 	@Before
 	public void withCalcInstance() {
@@ -27,7 +26,7 @@ public class TestsApp {
 	@Parameters
     public static List<String[]> getParametres() {
         return Arrays.asList(new String[][] {
-                { 	/*""+
+                { 	""+
         				"........\n"+
         				"........\n"+
         				"........\n"+
@@ -48,7 +47,7 @@ public class TestsApp {
 	        						"........\n"+
 	        						"........\n"+
 	        						"W" },
-                { 	""+
+                 	{""+
         				"........\n"+
         				"........\n"+
         				"........\n"+
@@ -67,94 +66,36 @@ public class TestsApp {
 	        						"...0....\n"+
 	        						"........\n"+
 	        						"........\n"+
-	        						"B"}*/
-                		//ça
-                		"........\n",
-                		//retourne ça
-                		"........\n"},
+	        						"B"},
                 
                 	{
-                		//ça
-                		"...WB...\nW",
+            		//ça
+                	"...WB...\n"
+                	+ "...WB...\nW",
                 		//retourne ça
-                		"...WB0..\nW"},
+                		"...WB0..\n"
+                		+ "...WB0..\nW"},
                 	
                 	{
-                		//ça
-                		"...BW...\nB",
+            		//ça
+                	"...BWW..\nB",
                 		//retourne ça
-                		"...BW0..\nB"},
+                		"...BWW0.\nB"},
                 		
                 	{
-                		//ça
-                		"...BW...\nW",
+            		//ça
+                	"...BW...\nW",
                 		//retourne ça
                 		"..0BW...\nW"},
                 		
                 	{
-                		//ça
-                		"...WB...\nB",
+            		//ça
+                	"...WB...\nB",
                 		//retourne ça
                 		"..0WB...\nB"},
-                	
-                	{
-                    	//ca 
-                    	".\n",
-                    	".\n",
-                   		".\n",
-                    		
-                   		//retourne ca
-                   		".\n",
-                   		".\n",
-                   		".\n"},	
-                   		
-                	{
-                		//ca 
-                		"W\n",
-                		"B\n",
-                		".\n",
-                		"W",
-                		//retourne ca
-                		"W\n",
-                		"B\n",
-                		"0\n",
-                		"W"},
-                	
-                	{
-                		//ca 
-                		"B\n",
-                		"W\n",
-                		".\n",
-                		"B",
-                		//retourne ca
-                		"B\n",
-                		"W\n",
-                		"0\n",
-                		"B"},
                 		
-                	{
-                   		//ca 
-                   		".\n",
-                   		"B\n",
-                   		"W\n",
-                   		"W",
-                   		//retourne ca
-                   		"0\n",
-                   		"B\n",
-                   		"W\n",
-                   		"W"},
-                 	{
-                     	//ca 
-                       	".\n",
-                        "W\n",
-                        "B\n",
-                        "B",
-                        //retourne ca
-                        "0\n",
-                        "W\n",
-                        "B\n",
-                        "B"},
                 	
+                		
 	        						});
         }
 
@@ -172,5 +113,23 @@ public class TestsApp {
 	        String retour = jeu.donnePossibilites(plateauInput);
 	        assertEquals(resultatPossibilites, retour);
 	    }
+	
+	@Test	
+	public void TestColonneToLigne(){
+			assertEquals("WB.\nW" ,jeu.passeEnLigne("W\n"+
+													"B\n"+
+													".\n"+
+													"W"));
+		}
+	
+	@Test	
+	public void TestColonnesToLignes(){
+			assertEquals("WB.\n"
+						+ "WB.\nW" ,jeu.passeEnLigne("WW\n"+
+													"BB\n"+
+													"..\n"+
+													"W"));
+		}
+
 	
 }
