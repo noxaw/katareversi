@@ -68,35 +68,93 @@ public class TestsApp {
 	        						"........\n"+
 	        						"........\n"+
 	        						"B"}*/
-                	//ça
-                	"........\n",
+                		//ça
+                		"........\n",
                 		//retourne ça
                 		"........\n"},
                 
                 	{
-            		//ça
-                	"...WB...\nW",
+                		//ça
+                		"...WB...\nW",
                 		//retourne ça
                 		"...WB0..\nW"},
                 	
                 	{
-            		//ça
-                	"...BW...\nB",
+                		//ça
+                		"...BW...\nB",
                 		//retourne ça
                 		"...BW0..\nB"},
                 		
                 	{
-            		//ça
-                	"...BW...\nW",
+                		//ça
+                		"...BW...\nW",
                 		//retourne ça
                 		"..0BW...\nW"},
                 		
                 	{
-            		//ça
-                	"...WB...\nB",
+                		//ça
+                		"...WB...\nB",
                 		//retourne ça
-                		"..0WB...\nB"}
+                		"..0WB...\nB"},
+                	
+                	{
+                    	//ca 
+                    	".\n",
+                    	".\n",
+                   		".\n",
+                    		
+                   		//retourne ca
+                   		".\n",
+                   		".\n",
+                   		".\n"},	
+                   		
+                	{
+                		//ca 
+                		"W\n",
+                		"B\n",
+                		".\n",
+                		"W",
+                		//retourne ca
+                		"W\n",
+                		"B\n",
+                		"0\n",
+                		"W"},
+                	
+                	{
+                		//ca 
+                		"B\n",
+                		"W\n",
+                		".\n",
+                		"B",
+                		//retourne ca
+                		"B\n",
+                		"W\n",
+                		"0\n",
+                		"B"},
                 		
+                	{
+                   		//ca 
+                   		".\n",
+                   		"B\n",
+                   		"W\n",
+                   		"W",
+                   		//retourne ca
+                   		"0\n",
+                   		"B\n",
+                   		"W\n",
+                   		"W"},
+                 	{
+                     	//ca 
+                       	".\n",
+                        "W\n",
+                        "B\n",
+                        "B",
+                        //retourne ca
+                        "0\n",
+                        "W\n",
+                        "B\n",
+                        "B"},
+                	
 	        						});
         }
 
